@@ -12,7 +12,7 @@ num = random.randint(1,100)
 clue = ('1 <-> 100')
 win = False
 tri = 0
-dif = int(input('Level of Difficulty (1-3): '))
+dif = int(input('Level of Difficulty (1-5): '))
 
 while win == False:
     # First Difficulty
@@ -248,3 +248,98 @@ while win == False:
             elif temp2 > 100:
                 temp2 = 100
             clue = (f'{temp1} <-> {temp2}')
+
+    # Fourth Difficulty
+    while dif == 4:
+        print(f'\nClue: {clue}')
+        print(f'Tries: {tri}')
+        guess = int(input('Guess: '))
+
+        if num == guess:
+            print('\n\n! You guessed the right number !')
+            print(f'! Tries: {tri} !\n')
+            win = True
+        else:
+            tri += 1
+
+        if tri == 1:
+            temp1 = num - (random.randint(10,50))
+            if temp1 < 0:
+                temp1 = 0
+            elif temp1 > 100:
+                temp1 = 100
+            if temp2 < 0:
+                temp2 = 0
+            elif temp2 > 100:
+                temp2 = 100
+            clue = (f'{temp1} < x')
+
+        elif tri == 2:
+            temp2 = num + (random.randint(10,50))
+            if temp1 < 0:
+                temp1 = 0
+            elif temp1 > 100:
+                temp1 = 100
+            if temp2 < 0:
+                temp2 = 0
+            elif temp2 > 100:
+                temp2 = 100
+            clue = (f'{temp1} < x < {temp2}')
+
+        elif tri == 3:
+            temp1 = num / (random.randint(2,4)
+            temp2 = num + (random.randint(2,32))
+            if temp1 < 0:
+                temp1 = 0
+                clue = (f'{temp1} <-> {temp2}')
+            elif temp1 > 100:
+                temp1 = 100
+                clue = (f'{temp1} <-> {temp2}')
+            if temp2 < 0:
+                temp2 = 0
+                clue = (f'{temp1} <-> {temp2}')
+            elif temp2 > 100:
+                temp2 = 100
+                clue = (f'{temp1} <-> {temp2}')
+            else:
+                clue = (f'(x/{temp1}) + {temp2}')
+
+        # elif tri == 4:
+        #     temp1 = num - (random.randint(10,30))
+        #     temp2 = num + (random.randint(10,30))
+        #     if temp1 < 0:
+        #         temp1 = 0
+        #     elif temp1 > 100:
+        #         temp1 = 100
+        #     if temp2 < 0:
+        #         temp2 = 0
+        #     elif temp2 > 100:
+        #         temp2 = 100
+        #     clue = (f'{temp1} <-> {temp2}')
+        #
+        # elif tri >= 5:
+        #     temp1 = num - (random.randint(5,15))
+        #     temp2 = num + (random.randint(5,15))
+        #     if temp1 < 0:
+        #         temp1 = 0
+        #     elif temp1 > 100:
+        #         temp1 = 100
+        #     if temp2 < 0:
+        #         temp2 = 0
+        #     elif temp2 > 100:
+        #         temp2 = 100
+        #     clue = (f'{temp1} <-> {temp2}')
+
+
+    # Fifth Difficulty
+    while dif == 5:
+        print(f'\nClue: None boop')
+        print(f'Tries: {tri}')
+        guess = int(input('Guess: '))
+
+        if num == guess:
+            print('\n\n! You guessed the right number !')
+            print(f'! Tries: {tri} !\n')
+            win = True
+        else:
+            tri += 1
