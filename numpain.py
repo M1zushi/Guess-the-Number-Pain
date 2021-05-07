@@ -30,7 +30,7 @@ while win == False:
 
         if tri == 1:
             temp1 = num - (30)
-            temp2 = num + (20))
+            temp2 = num + (20)
             if temp1 < 0:
                 temp1 = 0
             elif temp1 > 100:
@@ -287,7 +287,7 @@ while win == False:
             clue = (f'{temp1} < x < {temp2}')
 
         elif tri == 3:
-            temp1 = num / (random.randint(2,4)
+            temp1 = num // (random.randint(2,4))
             temp2 = num + (random.randint(2,32))
             if temp1 < 0:
                 temp1 = 0
@@ -333,7 +333,7 @@ while win == False:
 
     # Fifth Difficulty
     while dif == 5:
-        print(f'\nClue: None boop')
+        print('\nClue: none boop')
         print(f'Tries: {tri}')
         guess = int(input('Guess: '))
 
