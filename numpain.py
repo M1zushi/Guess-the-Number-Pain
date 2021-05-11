@@ -16,11 +16,11 @@ min = int(input('Choose a number to guess higher than: '))
 max = int(input('Choose a number to guess lower than: '))
 num = random.randint(min, max)
 clue = (f'{min} <-> {max}')
-win = False
 re = True
 tri = 0
 
 while re == True:
+    win = False
     while win == False:
         # First Difficulty
         while dif == 1:
@@ -346,14 +346,14 @@ while re == True:
             else:
                 tri += 1
 
-        # Play Again?
-        temp5 = str(input('Play Again? (Yes/No): '))
-        if temp5.lower() == 'no':
-            re = False
-        elif temp5.lower() == ' no':
-            re = False
-        else:
-            re = True
+    # Play Again?
+    temp5 = str(input('\nPlay Again? (Yes/No): '))
+    if temp5.lower() == 'no':
+        re = False
+    elif temp5.lower() == ' no':
+        re = False
+    else:
+        re = True
 
 else:
-    print('Stonks') # Idk stonks, numbers, close enough
+    print('\nStonks') # Idk stonks, numbers, close enough
